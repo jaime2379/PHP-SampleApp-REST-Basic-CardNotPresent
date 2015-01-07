@@ -223,11 +223,10 @@ if (Settings:: EMVData_ChangeMe)  {
 		$level2Data->Tax->Amount = '1.00'; // order_tax[amount]
 		$level2Data->Tax->Rate = '.5'; // order_tax[rate]
 		$level2Data->Tax->InvoiceNumber = 'testitem'; // order_tax[invoice_number]
-		$level2Data->Tax->ItemizedTaxes = New ItemizedTaxes ();
-		$level2Data->Tax->ItemizedTaxes->ItemizedTax = New ItemizedTax ();
-		$level2Data->Tax->ItemizedTaxes->ItemizedTax->Amount = '1.00'; // order_itemized_tax[N][amount]
-		$level2Data->Tax->ItemizedTaxes->ItemizedTax->Rate = '0.5'; // order_itemized_tax[N][rate]
-		$level2Data->Tax->ItemizedTaxes->ItemizedTax->Type = 'VAT'; // order_itemized_tax[N][type]
+		$level2Data->Tax->ItemizedTaxes = New ItemizedTax ();
+		$level2Data->Tax->ItemizedTaxes->Amount = '1.00'; // order_itemized_tax[N][amount]
+		$level2Data->Tax->ItemizedTaxes->Rate = '0.5'; // order_itemized_tax[N][rate]
+		$level2Data->Tax->ItemizedTaxes->Type = 'VAT'; // order_itemized_tax[N][type]
 		$level2Data->Description = 'testitem';
 		$level2Data->DestinationCountryCode = 'USA'; // order[shipto_country]
 		$lineItemDetail = new LineItemDetail ();
